@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  beartracks
+//  clicky
 //
 //  Created by Jayen Agrawal on 12/12/23.
 //
