@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,12 +22,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="GhH-FC-EmT" kind="relationship" relationship="rootViewController" id="9NB-Qd-Tex"/>
+                        <segue destination="fdg-ep-DPQ" kind="relationship" relationship="rootViewController" id="EO2-Iz-j6q"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lca-KV-4US" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-969" y="-146"/>
+            <point key="canvasLocation" x="-882" y="-146"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XLp-Gf-zpY">
@@ -36,101 +37,271 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="JON-ke-tS4">
-                                <rect key="frame" x="33" y="353" width="327" height="171"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="bUX-1h-nBZ">
+                                <rect key="frame" x="72.000000000000014" y="768" width="249.33333333333337" height="34.333333333333371"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ds5-v0-bFJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="171"/>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l3-ls-w3s">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="34.333333333333336"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="switch.2" catalog="system"/>
+                                        <connections>
+                                            <action selector="backAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="3Mo-ZN-7Kb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBf-sq-HGt">
+                                        <rect key="frame" x="199.66666666666669" y="0.0" width="49.666666666666657" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="switch.2" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Sej-fX-JxL">
+                                <rect key="frame" x="68" y="266" width="256" height="337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="57M-Rh-gwk">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="337"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYs-Hg-giW">
-                                                <rect key="frame" x="0.0" y="0.0" width="327" height="50.333333333333336"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="boom" buttonSize="large"/>
-                                                <connections>
-                                                    <action selector="boomButtonWith_button:" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="ZLh-6c-KeC"/>
-                                                </connections>
-                                            </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IUX-Zm-622">
-                                                <rect key="frame" x="0.0" y="60.333333333333314" width="327" height="50.333333333333343"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AWP-Pz-WzF">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="31"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueR-8V-aJR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="102.33333333333333" height="50.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" title="little" buttonSize="large"/>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6aV-Qr-pW0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <color key="tintColor" name="AccentColor"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
                                                         <connections>
-                                                            <action selector="littleClickButtonPressWith_button:" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="kku-ef-mcb"/>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="bg6-qS-EH2"/>
                                                         </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tY-Ga-P5h">
-                                                        <rect key="frame" x="112.33333333333334" y="0.0" width="102.33333333333334" height="50.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" title="medium" buttonSize="large"/>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="viy-R0-7ZC">
+                                                        <rect key="frame" x="68.999999999999986" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
                                                         <connections>
-                                                            <action selector="medClickButtonPressWith_button:" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="ixg-Um-Q7d"/>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="1ip-6g-rOc"/>
                                                         </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZe-SR-Ee1">
-                                                        <rect key="frame" x="224.66666666666671" y="0.0" width="102.33333333333334" height="50.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" title="big" buttonSize="large"/>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hSA-bR-pJc">
+                                                        <rect key="frame" x="138" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
                                                         <connections>
-                                                            <action selector="bigClickButtonPressWith_button:" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="bne-4z-bFO"/>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="ZiN-a8-mKE"/>
                                                         </connections>
-                                                    </button>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uoF-l7-Vgq">
+                                                        <rect key="frame" x="207" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="zrg-AY-iEH"/>
+                                                        </connections>
+                                                    </switch>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s2g-ka-5t7">
-                                                <rect key="frame" x="0.0" y="120.66666666666667" width="327" height="50.333333333333329"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Txr-54-xO1">
+                                                <rect key="frame" x="0.0" y="51" width="256" height="31"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8M-r9-z5s">
-                                                        <rect key="frame" x="0.0" y="0.0" width="102.33333333333333" height="50.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" title="warning" buttonSize="large"/>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pgq-8W-IF4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <color key="tintColor" name="AccentColor"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
                                                         <connections>
-                                                            <action selector="notifWarningWith_button:" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="F1W-xa-Dc3"/>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="hXt-WW-CHg"/>
                                                         </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTY-1K-a8h">
-                                                        <rect key="frame" x="112.33333333333334" y="0.0" width="102.33333333333334" height="50.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" title="error" buttonSize="large"/>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OdJ-IG-drd">
+                                                        <rect key="frame" x="68.999999999999986" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
                                                         <connections>
-                                                            <action selector="notifErrorWith_button:" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="fUY-dw-X4S"/>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="fHh-Ms-bLl"/>
                                                         </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbx-ar-GXO">
-                                                        <rect key="frame" x="224.66666666666671" y="0.0" width="102.33333333333334" height="50.333333333333336"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" title="success" buttonSize="large"/>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0sd-2q-PNN">
+                                                        <rect key="frame" x="138" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
                                                         <connections>
-                                                            <action selector="notifSuccessWith_button:" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="go5-8w-6ds"/>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="qzd-P6-FEx"/>
                                                         </connections>
-                                                    </button>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PaT-id-gQs">
+                                                        <rect key="frame" x="207" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="vqc-3C-HhN"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MW3-jj-Mbv">
+                                                <rect key="frame" x="0.0" y="102" width="256" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8o6-cR-hlq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <color key="tintColor" name="AccentColor"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="SXP-Ro-CjO"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EhE-at-3om">
+                                                        <rect key="frame" x="68.999999999999986" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="ZYO-yV-x1B"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gwC-II-bwq">
+                                                        <rect key="frame" x="138" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="93W-oE-tqO"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v63-RX-Cxw">
+                                                        <rect key="frame" x="207" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="7xo-Y8-ZL2"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rrQ-zh-1BZ">
+                                                <rect key="frame" x="0.0" y="153" width="256" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dSu-DG-kIw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="w00-zU-tGC"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eAH-Ps-qmp">
+                                                        <rect key="frame" x="68.999999999999986" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="yLJ-cc-9x4"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FpI-LE-9bB">
+                                                        <rect key="frame" x="138" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="wLt-iU-TN0"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AIl-L7-z7Q">
+                                                        <rect key="frame" x="207" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="cdJ-3f-QyI"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FNS-oJ-pnO">
+                                                <rect key="frame" x="0.0" y="204" width="256" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4SK-AN-nLO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="xQy-4L-Ce4"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YS7-cj-ixx">
+                                                        <rect key="frame" x="68.999999999999986" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="ONg-iX-9Pd"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xZ1-Dp-xvY">
+                                                        <rect key="frame" x="138" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="SdJ-TN-5AV"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cGb-Xg-unj">
+                                                        <rect key="frame" x="207" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="fNG-z9-Wco"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xq2-zz-sTh">
+                                                <rect key="frame" x="0.0" y="255" width="256" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t6Y-9m-6it">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="wQn-Sd-7Nu"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="V88-iT-yEJ">
+                                                        <rect key="frame" x="68.999999999999986" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="i8t-ge-s9Z"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Jq-DO-jwz">
+                                                        <rect key="frame" x="138" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="rw9-do-hVl"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SPG-tr-ItK">
+                                                        <rect key="frame" x="207" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="8Pe-fa-9Va"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ov4-ub-piJ">
+                                                <rect key="frame" x="0.0" y="306" width="256" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F5D-sq-SVf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <color key="tintColor" name="AccentColor"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="q4w-Fg-VEt"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O5R-ci-wGN">
+                                                        <rect key="frame" x="68.999999999999986" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="3mr-ek-Uha"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZgH-Wm-G8H">
+                                                        <rect key="frame" x="138" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="d8V-iB-5so"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qsm-ZT-aX1">
+                                                        <rect key="frame" x="207" y="0.0" width="51" height="31"/>
+                                                        <color key="onTintColor" systemColor="systemPinkColor"/>
+                                                        <connections>
+                                                            <action selector="hardSwitchAction" destination="GhH-FC-EmT" eventType="primaryActionTriggered" id="KrA-EF-hRk"/>
+                                                        </connections>
+                                                    </switch>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="bUX-1h-nBZ">
-                                <rect key="frame" x="67" y="768" width="259.33333333333331" height="34.333333333333371"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l3-ls-w3s">
-                                        <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="34.333333333333336"/>
-                                        <color key="tintColor" name="AccentColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="house" catalog="system"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBf-sq-HGt">
-                                        <rect key="frame" x="204.66666666666669" y="0.0" width="54.666666666666686" height="34.333333333333336"/>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="switch.2" catalog="system"/>
-                                        <connections>
-                                            <segue destination="fdg-ep-DPQ" kind="show" id="Jl6-Jd-aHo"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="078-5U-uzJ"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P5S-ud-cnA"/>
@@ -138,16 +309,42 @@
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="P5S-ud-cnA" firstAttribute="bottom" secondItem="bUX-1h-nBZ" secondAttribute="bottom" constant="15.67" id="4N7-Ls-bk6"/>
-                            <constraint firstItem="JON-ke-tS4" firstAttribute="centerY" secondItem="P5S-ud-cnA" secondAttribute="centerY" id="NYB-qz-YAv"/>
-                            <constraint firstItem="JON-ke-tS4" firstAttribute="centerX" secondItem="P5S-ud-cnA" secondAttribute="centerX" id="fOS-3Q-S31"/>
+                            <constraint firstItem="Sej-fX-JxL" firstAttribute="centerX" secondItem="P5S-ud-cnA" secondAttribute="centerX" id="XKa-L8-urg"/>
+                            <constraint firstItem="Sej-fX-JxL" firstAttribute="centerY" secondItem="P5S-ud-cnA" secondAttribute="centerY" id="c9x-dP-B9a"/>
                             <constraint firstItem="bUX-1h-nBZ" firstAttribute="centerX" secondItem="P5S-ud-cnA" secondAttribute="centerX" id="pj8-Ax-XRr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="00S-7t-Qix"/>
+                    <connections>
+                        <outletCollection property="Switches_Hard" destination="dSu-DG-kIw" collectionClass="NSMutableArray" id="BuK-yk-87b"/>
+                        <outletCollection property="Switches_Hard" destination="eAH-Ps-qmp" collectionClass="NSMutableArray" id="VsC-xG-1IJ"/>
+                        <outletCollection property="Switches_Hard" destination="FpI-LE-9bB" collectionClass="NSMutableArray" id="GXG-r4-dEI"/>
+                        <outletCollection property="Switches_Hard" destination="AIl-L7-z7Q" collectionClass="NSMutableArray" id="Z7c-5l-lwf"/>
+                        <outletCollection property="Switches_Hard" destination="4SK-AN-nLO" collectionClass="NSMutableArray" id="f40-Xw-uMv"/>
+                        <outletCollection property="Switches_Hard" destination="YS7-cj-ixx" collectionClass="NSMutableArray" id="CfU-QF-X2E"/>
+                        <outletCollection property="Switches_Hard" destination="xZ1-Dp-xvY" collectionClass="NSMutableArray" id="HES-i2-RWP"/>
+                        <outletCollection property="Switches_Hard" destination="cGb-Xg-unj" collectionClass="NSMutableArray" id="RtO-Xy-WLa"/>
+                        <outletCollection property="Switches_Hard" destination="t6Y-9m-6it" collectionClass="NSMutableArray" id="xjz-jG-Zhh"/>
+                        <outletCollection property="Switches_Hard" destination="V88-iT-yEJ" collectionClass="NSMutableArray" id="1Nh-OO-8Fk"/>
+                        <outletCollection property="Switches_Hard" destination="0Jq-DO-jwz" collectionClass="NSMutableArray" id="vim-d7-AEU"/>
+                        <outletCollection property="Switches_Hard" destination="SPG-tr-ItK" collectionClass="NSMutableArray" id="uNU-4h-uY3"/>
+                        <outletCollection property="Switches_Hard" destination="6aV-Qr-pW0" collectionClass="NSMutableArray" id="VdZ-NH-eXK"/>
+                        <outletCollection property="Switches_Hard" destination="viy-R0-7ZC" collectionClass="NSMutableArray" id="Wfc-hP-V3t"/>
+                        <outletCollection property="Switches_Hard" destination="hSA-bR-pJc" collectionClass="NSMutableArray" id="or7-s6-OGb"/>
+                        <outletCollection property="Switches_Hard" destination="uoF-l7-Vgq" collectionClass="NSMutableArray" id="8Hh-AZ-peL"/>
+                        <outletCollection property="Switches_Hard" destination="pgq-8W-IF4" collectionClass="NSMutableArray" id="R9l-B5-Oo8"/>
+                        <outletCollection property="Switches_Hard" destination="OdJ-IG-drd" collectionClass="NSMutableArray" id="8mF-ub-dI3"/>
+                        <outletCollection property="Switches_Hard" destination="0sd-2q-PNN" collectionClass="NSMutableArray" id="bgl-rT-OXW"/>
+                        <outletCollection property="Switches_Hard" destination="PaT-id-gQs" collectionClass="NSMutableArray" id="dmC-HI-jqu"/>
+                        <outletCollection property="Switches_Hard" destination="8o6-cR-hlq" collectionClass="NSMutableArray" id="XxO-Ny-psy"/>
+                        <outletCollection property="Switches_Hard" destination="EhE-at-3om" collectionClass="NSMutableArray" id="2Ph-CL-7gx"/>
+                        <outletCollection property="Switches_Hard" destination="gwC-II-bwq" collectionClass="NSMutableArray" id="Wdc-EA-rIK"/>
+                        <outletCollection property="Switches_Hard" destination="v63-RX-Cxw" collectionClass="NSMutableArray" id="Oqw-rY-Tdf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebL-cp-6xD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50" y="-146"/>
+            <point key="canvasLocation" x="843.51145038167931" y="-146.47887323943664"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gRT-Cv-jlO">
@@ -300,22 +497,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="U4e-4d-4OH">
-                                <rect key="frame" x="67" y="768" width="259.33333333333331" height="34.333333333333371"/>
+                                <rect key="frame" x="72.000000000000014" y="768" width="249.33333333333337" height="34.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88W-ol-Ftc">
-                                        <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="34.333333333333336"/>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="house" catalog="system"/>
-                                        <connections>
-                                            <action selector="backAction" destination="fdg-ep-DPQ" eventType="primaryActionTriggered" id="VNQ-W9-LGk"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQt-I4-1AF">
-                                        <rect key="frame" x="204.66666666666669" y="0.0" width="54.666666666666686" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="34.333333333333336"/>
                                         <color key="tintColor" name="AccentColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="switch.2" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQt-I4-1AF">
+                                        <rect key="frame" x="199.66666666666669" y="0.0" width="49.666666666666657" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="switch.2" catalog="system"/>
+                                        <connections>
+                                            <segue destination="GhH-FC-EmT" kind="show" id="g64-GC-4sU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -352,15 +549,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ann-Dp-4h6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473" y="592"/>
+            <point key="canvasLocation" x="-62" y="-146"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
     <resources>
-        <image name="house" catalog="system" width="128" height="104"/>
         <image name="switch.2" catalog="system" width="128" height="115"/>
         <namedColor name="AccentColor">
             <color red="0.1803921568627451" green="0.40392156862745099" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
