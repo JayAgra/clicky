@@ -1,6 +1,6 @@
 //
 //  TabBar.swift
-//  clicky
+//  useless
 //
 //  Created by Jayen Agrawal on 1/31/24.
 //
@@ -12,15 +12,16 @@ struct TabBar: View {
         case level1, level2, settings
     }
     @State private var selectedTab: Tab? = .level1
+    @State public var gameCenter: Bool
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            LevelOneView()
+            LevelOneView(gameCenterOk: gameCenter)
                 .tabItem {
                     Label("easy", systemImage: "switch.2")
                 }
                 .tag(Tab.level1)
-            LevelTwoView()
+            LevelTwoView(gameCenterOk: gameCenter)
                 .tabItem {
                     Label("hard", systemImage: "switch.2")
                 }
@@ -35,5 +36,5 @@ struct TabBar: View {
 }
 
 #Preview {
-    TabBar()
+    TabBar(gameCenter: false)
 }

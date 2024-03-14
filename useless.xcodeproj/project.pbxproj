@@ -34,7 +34,8 @@
 		F56F25EF2B6C2FF200F46F88 /* GameCompleteSheetL2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCompleteSheetL2.swift; sourceTree = "<group>"; };
 		F591BCB82B6C15EF000397DC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		F591BCBA2B6C16BD000397DC /* LevelOneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOneController.swift; sourceTree = "<group>"; };
-		F5FDAD2A2B6ADF5D00650A0C /* clicky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clicky.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B742052B7055FB0095CC48 /* useless.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = useless.entitlements; sourceTree = "<group>"; };
+		F5FDAD2A2B6ADF5D00650A0C /* useless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = useless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5FDAD2D2B6ADF5D00650A0C /* clickyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clickyApp.swift; sourceTree = "<group>"; };
 		F5FDAD2F2B6ADF5D00650A0C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		F5FDAD312B6ADF5E00650A0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,7 +56,7 @@
 		F5FDAD212B6ADF5D00650A0C = {
 			isa = PBXGroup;
 			children = (
-				F5FDAD2C2B6ADF5D00650A0C /* clicky */,
+				F5FDAD2C2B6ADF5D00650A0C /* useless */,
 				F5FDAD2B2B6ADF5D00650A0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,14 +64,15 @@
 		F5FDAD2B2B6ADF5D00650A0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5FDAD2A2B6ADF5D00650A0C /* clicky.app */,
+				F5FDAD2A2B6ADF5D00650A0C /* useless.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F5FDAD2C2B6ADF5D00650A0C /* clicky */ = {
+		F5FDAD2C2B6ADF5D00650A0C /* useless */ = {
 			isa = PBXGroup;
 			children = (
+				F5B742052B7055FB0095CC48 /* useless.entitlements */,
 				F5FDAD2D2B6ADF5D00650A0C /* clickyApp.swift */,
 				F56F25ED2B6C299700F46F88 /* GameCompleteSheetL1.swift */,
 				F56F25EF2B6C2FF200F46F88 /* GameCompleteSheetL2.swift */,
@@ -86,7 +88,7 @@
 				F5FDAD312B6ADF5E00650A0C /* Assets.xcassets */,
 				F5FDAD332B6ADF5E00650A0C /* Preview Content */,
 			);
-			path = clicky;
+			path = useless;
 			sourceTree = "<group>";
 		};
 		F5FDAD332B6ADF5E00650A0C /* Preview Content */ = {
@@ -100,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F5FDAD292B6ADF5D00650A0C /* clicky */ = {
+		F5FDAD292B6ADF5D00650A0C /* useless */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5FDAD382B6ADF5E00650A0C /* Build configuration list for PBXNativeTarget "clicky" */;
+			buildConfigurationList = F5FDAD382B6ADF5E00650A0C /* Build configuration list for PBXNativeTarget "useless" */;
 			buildPhases = (
 				F5FDAD262B6ADF5D00650A0C /* Sources */,
 				F5FDAD272B6ADF5D00650A0C /* Frameworks */,
@@ -112,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = clicky;
+			name = useless;
 			productName = clicky;
-			productReference = F5FDAD2A2B6ADF5D00650A0C /* clicky.app */;
+			productReference = F5FDAD2A2B6ADF5D00650A0C /* useless.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F5FDAD252B6ADF5D00650A0C /* Build configuration list for PBXProject "clicky" */;
+			buildConfigurationList = F5FDAD252B6ADF5D00650A0C /* Build configuration list for PBXProject "useless" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -145,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F5FDAD292B6ADF5D00650A0C /* clicky */,
+				F5FDAD292B6ADF5D00650A0C /* useless */,
 			);
 		};
 /* End PBXProject section */
@@ -309,9 +311,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = useless/useless.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"clicky/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"useless/Preview Content\"";
 				DEVELOPMENT_TEAM = D6MFYYVHA8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -328,7 +331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayagra.useless-machine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -346,9 +349,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = useless/useless.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"clicky/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"useless/Preview Content\"";
 				DEVELOPMENT_TEAM = D6MFYYVHA8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -365,7 +369,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayagra.useless-machine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -381,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F5FDAD252B6ADF5D00650A0C /* Build configuration list for PBXProject "clicky" */ = {
+		F5FDAD252B6ADF5D00650A0C /* Build configuration list for PBXProject "useless" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5FDAD362B6ADF5E00650A0C /* Debug */,
@@ -390,7 +394,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5FDAD382B6ADF5E00650A0C /* Build configuration list for PBXNativeTarget "clicky" */ = {
+		F5FDAD382B6ADF5E00650A0C /* Build configuration list for PBXNativeTarget "useless" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5FDAD392B6ADF5E00650A0C /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  LevelTwoSwitch.swift
-//  clicky
+//  useless
 //
 //  Created by Jayen Agrawal on 2/1/24.
 //

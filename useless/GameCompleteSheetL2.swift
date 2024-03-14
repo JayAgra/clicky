@@ -1,20 +1,28 @@
 //
 //  GameCompleteSheetL2.swift
-//  clicky
+//  useless
 //
 //  Created by Jayen Agrawal on 2/1/24.
 //
 
 import SwiftUI
+import GameKit
 
 struct GameCompleteSheetL2: View {
     @ObservedObject public var controller: LevelTwoController
     @Environment(\.dismiss) private var dismiss
     private var localSwitches = LevelTwoController()
+    public var gameCenterOk: Bool
     
-    init(controller: LevelTwoController) {
+    init(controller: LevelTwoController, gameCenterOk: Bool) {
         self.controller = controller
+        self.gameCenterOk = gameCenterOk
         localSwitches.stateBools = Array(repeating: true, count: 24)
+        if gameCenterOk {
+            GKLeaderboard.loadLeaderboards(IDs: ["level2_changes"], completionHandler: { leaderboard, error  in
+                leaderboard?.first?.submitScore(UserDefaults.standard.integer(forKey: "levelTwoCount"), context: 0, player: GKLocalPlayer.local, completionHandler: {_ in})
+            })
+        }
     }
     
     var body: some View {
@@ -55,5 +63,5 @@ struct GameCompleteSheetL2: View {
 }
 
 #Preview {
-    GameCompleteSheetL2(controller: LevelTwoController())
+    GameCompleteSheetL2(controller: LevelTwoController(), gameCenterOk: false)
 }

@@ -1,6 +1,6 @@
 //
 //  SettingsView.swift
-//  clicky
+//  useless
 //
 //  Created by Jayen Agrawal on 2/1/24.
 //
@@ -45,12 +45,12 @@ struct SettingsView: View {
             .sheet(isPresented: $showSheet) {
                 NavigationView {
                     VStack {
-                        Text("clicky is a fidget type game in which the object is to enable all switches. When a switch is pressed, a random number of other switches are set to a random value. The fewer switches toggled, the better your score is (lower = better).")
+                        Text("useless machine simulator is a fidget type game in which the object is to enable all switches. When a switch is pressed, a random number of other switches are set to a random value. The fewer switches toggled, the better your score is (lower = better).")
                             .padding()
                         Spacer()
                     }
                     .padding()
-                    .navigationTitle("about clicky")
+                    .navigationTitle("about useless machine simulator")
                 }
             }
         }
